@@ -31,5 +31,10 @@ public class Card
     {
         cardNumber = cardNum;
     }
+
+    public void Print()
+    {
+        Console.WriteLine($" {cardSymbol} {cardNumber}");
+    }
 }
 

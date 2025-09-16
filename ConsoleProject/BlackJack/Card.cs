@@ -29,4 +29,9 @@ public class Card
     {
         cardNumber = inCardNumber;
     }
+
+    public void Print()
+    {
+
+    }
 }

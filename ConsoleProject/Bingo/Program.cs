@@ -1,6 +1,5 @@
 ﻿int[,] bingo = new int[5, 5];
 int number = 1;
-int bingoCount = 1;
 
 bool bingoVisit1 = false;
 bool bingoVisit2 = false;
@@ -107,175 +106,69 @@ while (true)
                 }
                 Console.WriteLine();
             }
-        
-        
-            if (bingo[0, 0] == 0 && bingo[0, 1] == 0 && bingo[0, 2] == 0 && bingo[0, 3] == 0 && bingo[0, 4] == 0)
-            {
-                if(bingoVisit1 == true)
-                {
-                    Console.WriteLine();
-                }
-                else
-                {
-                    Console.WriteLine($"BingoCount : {bingoCount}빙고");
-                    bingoCount++;
-                    bingoVisit1 = true;
-                }                                    
-            }
 
-            if (bingo[1, 0] == 0 && bingo[1, 1] == 0 && bingo[1, 2] == 0 && bingo[1, 3] == 0 && bingo[1, 4] == 0)
+            int bingoCount = 0;
+            for (int y = 0; y < 5; ++y)
             {
-                if(bingoVisit2 == true)
+                bool bLineBingo = true;
+                for (int x = 0; x < 5; ++x)
                 {
-                    Console.WriteLine();
+                    if (bingo[y, x] != 0)
+                    {
+                        bLineBingo = false;
+                    }
                 }
-                else
+                if (bLineBingo)
                 {
-                    Console.WriteLine($"BingoCount : {bingoCount}빙고");
                     bingoCount++;
-                    bingoVisit2 = true;
                 }
             }
 
-            if (bingo[2, 0] == 0 && bingo[2, 1] == 0 && bingo[2, 2] == 0 && bingo[2, 3] == 0 && bingo[2, 4] == 0)
+            for (int x = 0; x < 5; ++x)
             {
-                if(bingoVisit3 == true)
+                bool bLineBingo = true;
+                for (int y = 0; y < 5; ++y)
                 {
-                    Console.WriteLine();
+                    if (bingo[y, x] != 0)
+                    {
+                        bLineBingo = false;
+                    }
                 }
-                else
+                if (bLineBingo)
                 {
-                    Console.WriteLine($"BingoCount : {bingoCount}빙고");
                     bingoCount++;
-                    bingoVisit3 = true;
                 }
             }
 
-            if (bingo[3, 0] == 0 && bingo[3, 1] == 0 && bingo[3, 2] == 0 && bingo[3, 3] == 0 && bingo[3, 4] == 0)
+            for (int x = 0; x < 5; ++x)
             {
-                if (bingoVisit4 == true)
+                bool bLineBingo = true;
+                if (bingo[x, x] != 0)
                 {
-                    Console.WriteLine();
+                    bLineBingo = false;
                 }
-                else
+                if (bLineBingo)
                 {
-                    Console.WriteLine($"BingoCount : {bingoCount}빙고");
                     bingoCount++;
-                    bingoVisit4 = true;
                 }
             }
 
-            if (bingo[4, 0] == 0 && bingo[4, 1] == 0 && bingo[4, 2] == 0 && bingo[4, 3] == 0 && bingo[4, 4] == 0)
+          
+            for (int i = 0; i < 5; ++i)
             {
-                if (bingoVisit5 == true)
+                bool bLineBingo = true;
+                if (bingo[i, 4 - i] != 0)
                 {
-                    Console.WriteLine();
+                    bLineBingo = false;
                 }
-                else
+                if (bLineBingo)
                 {
-                    Console.WriteLine($"BingoCount : {bingoCount}빙고");
                     bingoCount++;
-                    bingoVisit5 = true;
                 }
             }
 
-            if (bingo[0, 0] == 0 && bingo[1, 0] == 0 && bingo[2, 0] == 0 && bingo[3, 0] == 0 && bingo[4, 0] == 0)
-            {
-                if (bingoVisit6 == true)
-                {
-                    Console.WriteLine();
-                }
-                else
-                {
-                    Console.WriteLine($"BingoCount : {bingoCount}빙고");
-                    bingoCount++;
-                    bingoVisit6 = true;
-                }
-            }
-
-            if (bingo[0, 1] == 0 && bingo[1, 1] == 0 && bingo[2, 1] == 0 && bingo[3, 1] == 0 && bingo[4, 1] == 0)
-            {
-                if (bingoVisit7 == true)
-                {
-                    Console.WriteLine();
-                }
-                else
-                {
-                    Console.WriteLine($"BingoCount : {bingoCount}빙고");
-                    bingoCount++;
-                    bingoVisit7 = true;
-                }
-            }
-
-            if (bingo[0, 2] == 0 && bingo[1, 2] == 0 && bingo[2, 2] == 0 && bingo[3, 2] == 0 && bingo[4, 2] == 0)
-            {
-                if (bingoVisit8 == true)
-                {
-                    Console.WriteLine();
-                }
-                else
-                {
-                    Console.WriteLine($"BingoCount : {bingoCount}빙고");
-                    bingoCount++;
-                    bingoVisit8 = true;
-                }
-            }
-
-            if (bingo[0, 3] == 0 && bingo[1, 3] == 0 && bingo[2, 3] == 0 && bingo[3, 3] == 0 && bingo[4, 3] == 0)
-            {
-                if (bingoVisit9 == true)
-                {
-                    Console.WriteLine();
-                }
-                else
-                {
-                    Console.WriteLine($"BingoCount : {bingoCount}빙고");
-                    bingoCount++;
-                    bingoVisit9 = true;
-                }
-            }
-
-            if (bingo[0, 4] == 0 && bingo[1, 4] == 0 && bingo[2, 4] == 0 && bingo[3, 4] == 0 && bingo[4, 4] == 0)
-            {
-                if (bingoVisit10 == true)
-                {
-                    Console.WriteLine();
-                }
-                else
-                {
-                    Console.WriteLine($"BingoCount : {bingoCount}빙고");
-                    bingoCount++;
-                    bingoVisit10 = true;
-                }
-            }
-
-            if (bingo[0, 0] == 0 && bingo[1, 1] == 0 && bingo[2, 2] == 0 && bingo[3, 3] == 0 && bingo[4, 4] == 0)
-            {
-                if (bingoVisit11 == true)
-                {
-                    Console.WriteLine();
-                }
-                else
-                {
-                    Console.WriteLine($"BingoCount : {bingoCount}빙고");
-                    bingoCount++;
-                    bingoVisit11 = true;
-                }
-            }
-
-            if (bingo[0, 4] == 0 && bingo[1, 3] == 0 && bingo[2, 2] == 0 && bingo[3, 1] == 0 && bingo[4, 0] == 0)
-            {
-                if (bingoVisit12 == true)
-                {
-                    Console.WriteLine();
-                }
-                else
-                {
-                    Console.WriteLine($"BingoCount : {bingoCount}빙고");
-                    bingoCount++;
-                    bingoVisit12 = true;
-                }
-            }        
+            Console.WriteLine($"Bingo : {bingoCount}");
+            
         }       
     }
 }

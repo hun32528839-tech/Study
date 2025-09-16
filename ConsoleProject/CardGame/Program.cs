@@ -33,6 +33,10 @@ for (int i = 0; i < cards.Length - 2; i += 3) // 카드의 인덱스 초과 오�
 
     if (cards[i].GetCardNumber() <= cards[i + 1].GetCardNumber())
     {
+
+        Console.Write("첫번째 카드");
+        cards[i].Print();
+
         Console.WriteLine($"첫번째 카드 : {cards[i].GetSymbol()} {cards[i].GetCardNumber()}");
         Console.WriteLine($"두번째 카드 : {cards[i + 1].GetSymbol()} {cards[i + 1].GetCardNumber()}");
     }

@@ -5,13 +5,23 @@ VisualStudioVersion = 17.11.35208.52
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2025.09.05", "2025.09.05\2025.09.05.csproj", "{A7407C8C-9214-4792-958B-C17E5AF1CDC2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlackJack", "BlackJack\BlackJack.csproj", "{8C28DBD6-50A7-4047-93DE-5C4E2340CAB3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlackJack", "BlackJack\BlackJack.csproj", "{8C28DBD6-50A7-4047-93DE-5C4E2340CAB3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardGame", "CardGame\CardGame.csproj", "{BF09CEAD-0A9E-42FB-89EB-2E76BDFD88FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CardGame", "CardGame\CardGame.csproj", "{BF09CEAD-0A9E-42FB-89EB-2E76BDFD88FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RockPaperScissors", "RockPaperScissors\RockPaperScissors.csproj", "{C9003A2B-8D16-4221-853D-7487139D06AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RockPaperScissors", "RockPaperScissors\RockPaperScissors.csproj", "{C9003A2B-8D16-4221-853D-7487139D06AD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bingo", "Bingo\Bingo.csproj", "{7BA3F160-E8BB-4C0F-B718-923D04410176}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bingo", "Bingo\Bingo.csproj", "{7BA3F160-E8BB-4C0F-B718-923D04410176}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UpDown", "UpDown\UpDown.csproj", "{6AA66743-18EE-483C-9B45-2FC15CB2A881}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exam", "Exam\Exam.csproj", "{8F3EC7E4-8C10-4BCB-A29E-83B791DEED2A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Baccarat", "Bacara\Baccarat.csproj", "{1402A6E5-B17C-4B23-8E0E-F41387EDFAD5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Basic Multiplication Table", "gugudanBasic\Basic Multiplication Table.csproj", "{1A6CED59-4D88-4709-BA4B-6F9B63D6D1C1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Multiplication Table", "gugudan\Multiplication Table.csproj", "{AB02AD2F-6B55-4A4B-A3E8-0DF0588E1737}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +49,26 @@ Global
 		{7BA3F160-E8BB-4C0F-B718-923D04410176}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7BA3F160-E8BB-4C0F-B718-923D04410176}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7BA3F160-E8BB-4C0F-B718-923D04410176}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AA66743-18EE-483C-9B45-2FC15CB2A881}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AA66743-18EE-483C-9B45-2FC15CB2A881}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AA66743-18EE-483C-9B45-2FC15CB2A881}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AA66743-18EE-483C-9B45-2FC15CB2A881}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F3EC7E4-8C10-4BCB-A29E-83B791DEED2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F3EC7E4-8C10-4BCB-A29E-83B791DEED2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F3EC7E4-8C10-4BCB-A29E-83B791DEED2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F3EC7E4-8C10-4BCB-A29E-83B791DEED2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1402A6E5-B17C-4B23-8E0E-F41387EDFAD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1402A6E5-B17C-4B23-8E0E-F41387EDFAD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1402A6E5-B17C-4B23-8E0E-F41387EDFAD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1402A6E5-B17C-4B23-8E0E-F41387EDFAD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A6CED59-4D88-4709-BA4B-6F9B63D6D1C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A6CED59-4D88-4709-BA4B-6F9B63D6D1C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A6CED59-4D88-4709-BA4B-6F9B63D6D1C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A6CED59-4D88-4709-BA4B-6F9B63D6D1C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB02AD2F-6B55-4A4B-A3E8-0DF0588E1737}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB02AD2F-6B55-4A4B-A3E8-0DF0588E1737}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB02AD2F-6B55-4A4B-A3E8-0DF0588E1737}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB02AD2F-6B55-4A4B-A3E8-0DF0588E1737}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
