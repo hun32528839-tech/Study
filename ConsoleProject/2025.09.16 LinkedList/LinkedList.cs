@@ -7,8 +7,7 @@
 public class LinkedList
 {
     public Node root;
-
-    int index = 0;
+   
     int count = 0;
 
     public void Add(int inValue)
@@ -85,7 +84,7 @@ public class LinkedList
 
     public void RemoveAt(int inIndex)
     {
-        index = 0;
+        int index = 0;
 
         Node temp = root;
         Node prev = null;

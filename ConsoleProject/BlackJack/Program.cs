@@ -5,7 +5,7 @@ Card[] cards1 = new Card[52]; // 카드1 배열 52장 인스턴스 생성
 Card[] cards2 = new Card[52]; // 카드2 배열 52장 인스턴스 생성
 Random random = new Random();
 
-for (int i = 0; i < cards1.Length; i++) // 카드2 초기화 
+for (int i = 0; i < cards1.Length; i++) // 카드1 초기화 
 {
     cards1[i] = new Card();
     cards1[i].SetSymbol((Symbol)(i / 13) + 1); // 카드의 문양을 enum으로 만들어서 13장씩 계산
@@ -60,6 +60,8 @@ int playerIndex = 0;
 int dealerTotalNum = 0;
 int playerTotalNum = 0;
 
+
+
 // 딜러의 인덱스를 처리하는 구간
 while (dealerIndex + 4 < cards1.Length) // 게임 한판에 들어가는 카드의 최소 갯수가 4장이기 때문에 index + 4로 작성
 {
@@ -69,7 +71,7 @@ while (dealerIndex + 4 < cards1.Length) // 게임 한판에 들어가는 카드�
     Console.WriteLine("BlackJack Start.");
     Console.WriteLine();
 
-    Console.WriteLine($"Dealer Card : {cards1[dealerIndex].GetSymbol()} {cards1[dealerIndex].GetCardNumber()}");
+    cards1[dealerIndex].Print();
 
     if (cards1[dealerIndex].GetCardNumber() == 1)
     {
@@ -85,7 +87,7 @@ while (dealerIndex + 4 < cards1.Length) // 게임 한판에 들어가는 카드�
 
 
     // 플레이어의 인덱스를 처리
-    Console.WriteLine($"Player Card : {cards2[playerIndex].GetSymbol()} {cards2[playerIndex].GetCardNumber()}");
+    cards2[playerIndex].Print();
 
     if (cards2[playerIndex].GetCardNumber() == 1)
     {
@@ -96,7 +98,7 @@ while (dealerIndex + 4 < cards1.Length) // 게임 한판에 들어가는 카드�
         playerTotalNum += cards2[playerIndex].GetCardNumber();
     }
     playerIndex++;
-    Console.WriteLine($"Player Card : {cards2[playerIndex].GetSymbol()} {cards2[playerIndex].GetCardNumber()}");
+    cards2[playerIndex].Print();
 
     if (cards2[playerIndex].GetCardNumber() == 1)
     {
@@ -165,7 +167,7 @@ while (dealerIndex + 4 < cards1.Length) // 게임 한판에 들어가는 카드�
             if (result == 1)
             {
                 Console.WriteLine("Add Card");
-                Console.WriteLine($"Player Add Card : {cards2[playerIndex].GetSymbol()} {cards2[playerIndex].GetCardNumber()}");
+                cards2[playerIndex].Print();
                 playerTotalNum += cards2[playerIndex].GetCardNumber();
                 if (cards2[playerIndex - 2].GetCardNumber() == 1 || cards2[playerIndex - 1].GetCardNumber() == 1 && playerTotalNum > 21)
                 {
@@ -183,7 +185,7 @@ while (dealerIndex + 4 < cards1.Length) // 게임 한판에 들어가는 카드�
                 Console.WriteLine();
                 Console.WriteLine("Dealer Turn");
 
-                Console.WriteLine($"Dealer Card : {cards1[dealerIndex].GetSymbol()} {cards1[dealerIndex].GetCardNumber()}");
+                cards1[dealerIndex].Print();
 
                 if (cards1[dealerIndex - 1].GetCardNumber() != 1 && cards1[dealerIndex].GetCardNumber() == 1)
                 {
@@ -200,7 +202,8 @@ while (dealerIndex + 4 < cards1.Length) // 게임 한판에 들어가는 카드�
 
                 while (dealerTotalNum <= 17)
                 {
-                    Console.WriteLine($"Dealer Add Card : {cards1[dealerIndex].GetSymbol()} {cards1[dealerIndex].GetCardNumber()}");
+                    Console.Write("Dealer Add Card ");
+                    cards1[dealerIndex].Print();
                     dealerTotalNum += cards1[dealerIndex].GetCardNumber();
                     if (cards1[dealerIndex - 2].GetCardNumber() == 1 || cards1[dealerIndex - 1].GetCardNumber() == 1 || cards2[dealerIndex].GetCardNumber() == 1 && dealerTotalNum > 21)
                     {

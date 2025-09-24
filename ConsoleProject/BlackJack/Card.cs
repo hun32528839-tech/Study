@@ -32,6 +32,6 @@ public class Card
 
     public void Print()
     {
-
+        Console.WriteLine($"{symbol} {cardNumber}");
     }
 }

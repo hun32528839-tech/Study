@@ -96,207 +96,62 @@ public class Game
                     }
                 }
 
-                if (result == (int)BettingInput.Player)
-                {
-                    Console.WriteLine("Player에게 베팅하셨습니다");
-                    Console.WriteLine();
-
-                  
-                    Console.Write("Player의 첫번째 카드 : ");
-                    
-                    cards[0].Print();
-
-                    if (cards[0].GetCardNumber() >= 10 && cards[0].GetCardNumber() <= 13)
-                    {
-                        playerTotalNum += 0;
-                    }
-                    else
-                    {
-                        playerTotalNum += cards[0].GetCardNumber();
-                    }
-
-                    Console.WriteLine();
-                    Console.Write("Banker의 첫번째 카드 : ");
-                    cards[1].Print();
-
-                    if (cards[1].GetCardNumber() >= 10 && cards[1].GetCardNumber() <= 13)
-                    {
-                        bankerTotalNum += 0;
-                    }
-                    else
-                    {
-                        bankerTotalNum += cards[1].GetCardNumber();
-                    }
-
-                    Console.WriteLine();
-                    Console.Write("Player의 두번째 카드 : ");
-                    cards[2].Print();
-
-                    if (cards[2].GetCardNumber() >= 10 && cards[2].GetCardNumber() <= 13)
-                    {
-                        playerTotalNum += 0;
-                    }
-                    else
-                    {
-                        playerTotalNum += cards[2].GetCardNumber();
-                    }
-
-                    Console.WriteLine();
-                    Console.Write("Banker의 두번째 카드 : ");
-                    cards[3].Print();
-
-                    if (cards[3].GetCardNumber() >= 10 && cards[3].GetCardNumber() <= 13)
-                    {
-                        bankerTotalNum += 0;
-                    }
-                    else
-                    {
-                        bankerTotalNum += cards[3].GetCardNumber();
-                    }
-
-                    Console.WriteLine();
-
-                    TotalNum(ref playerTotalNum, ref bankerTotalNum);
-
-                    Console.WriteLine($"PlayerTotalNum : {playerTotalNum} BankerTotalNum : {bankerTotalNum}");
-
-                    PlayerBetting(playerTotalNum, bankerTotalNum);
-                    break;                                      
-                }                   
-               
-                else if (result == (int)BettingInput.Banker)
-                {
-                    Console.WriteLine("Banker에게 베팅하셨습니다");
-                    Console.WriteLine();
-
-                    Console.Write("Player의 첫번째 카드 : ");
-                    cards[0].Print();
-                    if (cards[0].GetCardNumber() >= 10 && cards[0].GetCardNumber() <= 13)
-                    {
-                        playerTotalNum += 0;
-                    }
-                    else
-                    {
-                        playerTotalNum += cards[0].GetCardNumber();
-                    }
-
-                    Console.WriteLine();
-                    Console.Write("Banker의 첫번째 카드 : ");
-                    cards[1].Print();
-
-                    if (cards[1].GetCardNumber() >= 10 && cards[1].GetCardNumber() <= 13)
-                    {
-                        bankerTotalNum += 0;
-                    }
-                    else
-                    {
-                        bankerTotalNum += cards[1].GetCardNumber();
-                    }
-
-                    Console.WriteLine();
-                    Console.Write("Player의 두번째 카드 : ");
-                    cards[2].Print();
-
-                    if (cards[2].GetCardNumber() >= 10 && cards[2].GetCardNumber() <= 13)
-                    {
-                        playerTotalNum += 0;
-                    }
-                    else
-                    {
-                        playerTotalNum += cards[2].GetCardNumber();
-                    }
-
-                    Console.WriteLine();
-                    Console.Write("Banker의 두번째 카드 : ");
-                    cards[3].Print();
-
-                    if (cards[3].GetCardNumber() >= 10 && cards[3].GetCardNumber() <= 13)
-                    {
-                        bankerTotalNum += 0;
-                    }
-                    else
-                    {
-                        bankerTotalNum += cards[3].GetCardNumber();
-                    }
-
-                    Console.WriteLine();
-
-                    TotalNum(ref playerTotalNum, ref bankerTotalNum);
-
-                    Console.WriteLine($"PlayerTotalNum : {playerTotalNum} BankerTotalNum : {bankerTotalNum}");
-
-                    BankerBetting(playerTotalNum, bankerTotalNum);
-                    break;
-                    
-                }
-            
-                else if (result == (int)BettingInput.Draw)
-                {
-                    Console.WriteLine("Draw에 베팅하셨습니다");
-                    Console.WriteLine();
-
-                    Console.Write("Player의 첫번째 카드 : ");
-                    cards[0].Print();
-                    if (cards[0].GetCardNumber() >= 10 && cards[0].GetCardNumber() <= 13)
-                    {
-                        playerTotalNum += 0;
-                    }
-                    else
-                    {
-                        playerTotalNum += cards[0].GetCardNumber();
-                    }
-
-                    Console.WriteLine();
-                    Console.Write("Banker의 첫번째 카드 : ");
-                    cards[1].Print();
-
-                    if (cards[1].GetCardNumber() >= 10 && cards[1].GetCardNumber() <= 13)
-                    {
-                        bankerTotalNum += 0;
-                    }
-                    else
-                    {
-                        bankerTotalNum += cards[1].GetCardNumber();
-                    }
-
-                    Console.WriteLine();
-                    Console.Write("Player의 두번째 카드 : ");
-                    cards[2].Print();
-
-                    if (cards[2].GetCardNumber() >= 10 && cards[2].GetCardNumber() <= 13)
-                    {
-                        playerTotalNum += 0;
-                    }
-                    else
-                    {
-                        playerTotalNum += cards[2].GetCardNumber();
-                    }
-
-                    Console.WriteLine();
-                    Console.Write("Banker의 두번째 카드 : ");
-                    cards[3].Print();
-
-                    if (cards[3].GetCardNumber() >= 10 && cards[3].GetCardNumber() <= 13)
-                    {
-                        bankerTotalNum += 0;
-                    }
-                    else
-                    {
-                        bankerTotalNum += cards[3].GetCardNumber();
-                    }
-
-                    Console.WriteLine();
-
-                    TotalNum(ref playerTotalNum, ref bankerTotalNum);
-                
-                    Console.WriteLine($"PlayerTotalNum : {playerTotalNum} BankerTotalNum : {bankerTotalNum}");
-
-                    DrawBetting(playerTotalNum, bankerTotalNum);
-                    break;
-                }               
+                PrintResult((BettingInput)result);
             }
         }
 
+        void PrintResult(BettingInput input)
+        {
+            int playerTotalNum = 0;
+            int bankerTotalNum = 0;
+            switch (input)
+            {
+                case BettingInput.Player:
+                    Console.WriteLine("Player에 베팅하셨습니다");
+                    break;
+                case BettingInput.Banker:
+                    Console.WriteLine("Banker에 베팅하셨습니다");
+                    break;
+                case BettingInput.Draw:
+                    Console.WriteLine("Draw에 베팅하셨습니다");
+                    break;
+            }
+
+
+            Console.WriteLine();
+
+            playerTotalNum += GetCardPoint(0, "Player");
+
+            Console.WriteLine();
+
+            bankerTotalNum += GetCardPoint(1, "Banker");
+
+            Console.WriteLine();
+
+            playerTotalNum += GetCardPoint(2, "Player");
+
+            Console.WriteLine();
+
+            bankerTotalNum += GetCardPoint(3, "Banker");
+
+            Console.WriteLine();
+
+            TotalNum(ref playerTotalNum, ref bankerTotalNum);
+
+            Console.WriteLine($"PlayerTotalNum : {playerTotalNum} BankerTotalNum : {bankerTotalNum}");
+            switch (input)
+            {
+                case BettingInput.Player:
+                    PlayerBetting(playerTotalNum, bankerTotalNum);
+                    break;
+                case BettingInput.Banker:
+                    BankerBetting(playerTotalNum, bankerTotalNum);
+                    break;
+                case BettingInput.Draw:
+                    DrawBetting(playerTotalNum, bankerTotalNum);
+                    break;
+            }
+        }
 
         void TotalNum(ref int playerTotalNum, ref int bankerTotalNum)
         {
@@ -418,13 +273,20 @@ public class Game
                 
             }
         }
-
-        void CardValue(Card card)
+        int GetCardValue(Card card)
         {
             int num = card.GetCardNumber();
-            num = num >= 10 ? 0 : num;
+            return (num >= 10) ? 0 : num;
         }
-    }   
+
+        int GetCardPoint(int cardIndex , string owner)
+        {
+            Console.Write($"{owner}의 카드 ");
+            cards[cardIndex].Print();
+            return GetCardValue(cards[cardIndex]);
+        }
+
+    }
 }
 
 // ref - 변수의 참조(주소)를 전달해서, 함수 안에서 바꾸면 실제 변수 값이 바뀜
@@ -433,3 +295,30 @@ public class Game
 // 함수 목적	ref 필요 여부
 // 값을 읽기만 함	❌ 필요 없음
 // 값을 바꿔서 밖에서도 유지하고 싶음	✅ ref 필요함
+
+// ref와 out의 차이
+// ref와 out 모두 값을 참조로 전달
+// ref 매개변수는 메서드 호출 전에 반드시 초기화되어야 함
+// out - 초기화 안 해도 됨 (단, 메서드 내에서 반드시 값을 할당해야 함)
+// out - 호출하는 쪽에서는 x, y를 초기화하지 않아도 됨
+// out - ref와 달리 out은 호출 전 초기화하지 않아도 되지만, 메서드 내부에서 값을 할당하지 않으면 컴파일 에러가 남
+
+// 예시)
+// void ModifyRef(ref int a)
+//{
+//    a += 10;
+//}
+
+//void ModifyOut(out int b)
+//{
+//    b = 20;
+//}
+
+//int x = 5;
+//int y;
+
+//ModifyRef(ref x);  // x는 반드시 초기화 필요
+//ModifyOut(out y);  // y는 초기화 불필요
+
+//Console.WriteLine(x); // 출력: 15
+//Console.WriteLine(y); // 출력: 20
